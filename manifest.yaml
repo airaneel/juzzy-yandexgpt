@@ -10,8 +10,6 @@ icon: icon.svg
 description:
   en_US: YandexGPT Pro, Lite, and Alice AI language models from Yandex Cloud.
   ru_RU: Языковые модели YandexGPT Pro, Lite и Alice AI от Yandex Cloud.
-tags:
-  - model
 resource:
   memory: 268435456
   permission:
