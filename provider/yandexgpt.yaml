@@ -1,0 +1,55 @@
+background: '#FC3F1D'
+configurate_methods:
+  - predefined-model
+description:
+  en_US: YandexGPT Pro, Lite, and Alice AI language models from Yandex Cloud.
+  ru_RU: Языковые модели YandexGPT Pro, Lite и Alice AI от Yandex Cloud.
+extra:
+  python:
+    model_sources:
+      - models/llm/llm.py
+    provider_source: provider/yandexgpt.py
+help:
+  title:
+    en_US: Get your API Key from Yandex Cloud
+    ru_RU: Получите API-ключ в Yandex Cloud
+  url:
+    en_US: https://console.yandex.cloud/iam/service-accounts
+icon_large:
+  en_US: icon.svg
+icon_small:
+  en_US: icon.svg
+label:
+  en_US: YandexGPT
+  ru_RU: YandexGPT
+models:
+  llm:
+    position: models/llm/_position.yaml
+    predefined:
+      - models/llm/*.yaml
+provider: yandexgpt
+provider_credential_schema:
+  credential_form_schemas:
+    - label:
+        en_US: API Key
+        ru_RU: API-ключ
+      placeholder:
+        en_US: Enter your Yandex Cloud API Key
+        ru_RU: Введите ваш API-ключ Yandex Cloud
+      required: true
+      type: secret-input
+      variable: api_key
+    - label:
+        en_US: Folder ID
+        ru_RU: ID каталога
+      placeholder:
+        en_US: Enter your Yandex Cloud Folder ID
+        ru_RU: Введите ID каталога Yandex Cloud
+      required: true
+      type: text-input
+      variable: folder_id
+      help:
+        en_US: Found in your Yandex Cloud Console folder settings
+        ru_RU: Находится в настройках каталога в консоли Yandex Cloud
+supported_model_types:
+  - llm
