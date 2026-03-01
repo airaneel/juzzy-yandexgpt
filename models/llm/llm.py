@@ -36,7 +36,7 @@ class YandexGPTLargeLanguageModel(OAICompatLargeLanguageModel):
     @staticmethod
     def _add_custom_parameters(credentials: dict) -> None:
         credentials["mode"] = "chat"
-        credentials["endpoint_url"] = "https://llm.api.cloud.yandex.net/v1"
+        credentials["endpoint_url"] = "https://ai.api.cloud.yandex.net/v1"
 
     @staticmethod
     def _build_model_uri(model: str, credentials: dict) -> str:
